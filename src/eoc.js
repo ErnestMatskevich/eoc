@@ -51,7 +51,9 @@ const common = {
   lint: require('./commands/lint'),
   docs: require('./commands/docs'),
   jeo_disassemble: require('./commands/jeo/disassemble'),
-  jeo_assemble: require('./commands/jeo/assemble')
+  jeo_assemble: require('./commands/jeo/assemble'),
+  shell: require('./commands/shell')
+
 };
 const commands = {
   [language.java]: {
@@ -71,7 +73,7 @@ const commands = {
       link: require('./commands/js/link'),
       compile: require('./commands/js/compile'),
       dataize: require('./commands/js/dataize'),
-      test: require('./commands/js/test')
+      test: require('./commands/js/test'),
     }
   }
 };
@@ -391,6 +393,12 @@ program.command('jeo:assemble')
   )
   .action((str, opts) => {
     coms().jeo_assemble({...program.opts(), ...str});
+  });
+
+program.command('shell')
+  .description('Open the EO shell (Read-Eval-Print-Loop) mode')
+  .action((str, opts) => {
+    coms().shell(program.opts());
   });
 
 try {
