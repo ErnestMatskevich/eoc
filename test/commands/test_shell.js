@@ -30,7 +30,7 @@ const {runSync} = require('../helpers');
  * @param {Function} done - Mocha's callback to signal completion
  */
 describe('shell', function() {
-  it('Open the EO shell (Read-Eval-Print-Loop) mode', function(shell) {
+  it('Open the EO shell (Read-Eval-Print-Loop) mode', function(done) {
     const stdout = runSync(['shell']);
     assert(
       stdout.includes('Sorry, this command is not yet implemented 🌵'),
