@@ -18,6 +18,34 @@
                 <include>org/eolang/Inspect.class</include>
                 <include>org/eolang/Inspect$*.class</include>
                 <include>org/eolang/package-info.class</include>
+                <include>org/eolang/Current.class</include>
+                <include>org/eolang/MockProgram.class</include>
+                <include>org/eolang/TkLs.class</include>
+                <include>org/eolang/TkGo.class</include>
+                <include>org/eolang/Mocked.class</include>
+                <include>org/eolang/Mocked$*.class</include>
+                <include>org/eolang/PhiString.class</include>
+                <include>org/eolang/PhiString*.class</include>
+                <include>org/eolang/TkUp.class</include>
+                <include>org/eolang/TkUp*.class</include>
+                <include>org/eolang/TkAdd.class</include>
+                <include>org/eolang/TkAdd*.class</include>
+                <include>org/eolang/TkRm.class</include>
+                <include>org/eolang/TkRm*.class</include>
+                <include>org/eolang/TkCp.class</include>
+                <include>org/eolang/TkCp*.class</include>
+                <include>org/eolang/TkTo.class</include>
+                <include>org/eolang/TkTo*.class</include>
+                <include>org/eolang/TkDd.class</include>
+                <include>org/eolang/TkDd*.class</include>
+                <include>org/eolang/TkForm.class</include>
+                <include>org/eolang/TkForm*.class</include>
+                <include>org/eolang/PhiBytes.class</include>
+                <include>org/eolang/PhiBytes*.class</include>
+                <include>org/eolang/TkPut.class</include>
+                <include>org/eolang/TkPut*.class</include>
+                <include>org/eolang/TkRun.class</include>
+                <include>org/eolang/TkRun*.class</include>
             </includes>
             <outputDirectory>/</outputDirectory>
         </fileSet>
@@ -32,6 +60,7 @@
             <includes>
                 <include>org.takes:takes</include>
                 <include>org.cactoos:cactoos</include>
+                <include>org.eolang:eo-runtime</include>
             </includes>
             <outputDirectory>/</outputDirectory>
         </dependencySet>

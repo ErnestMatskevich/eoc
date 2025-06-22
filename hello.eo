@@ -1,0 +1,4 @@
+# My first object in EO!
+[args] > hello
+  QQ.io.stdout > @
+    "Hello, world!\n"

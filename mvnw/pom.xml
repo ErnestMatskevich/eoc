@@ -13,9 +13,9 @@
     <jeo.version>0.10.0</jeo.version>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-    <eo.version>undefined</eo.version>
-    <heap-size>undefined</heap-size>
-    <stack-size>undefined</stack-size>
+    <eo.version>0.56.2</eo.version>
+    <heap-size>1024m</heap-size>
+    <stack-size>1m</stack-size>
   </properties>
   <dependencies>
     <dependency>
@@ -44,10 +44,10 @@
   </dependencies>
   <build>
     <finalName>eoc</finalName>
-    <sourceDirectory>${eo.generatedDir}</sourceDirectory>
-    <directory>${eo.targetDir}</directory>
-    <outputDirectory>${eo.targetDir}/classes</outputDirectory>
-    <testOutputDirectory>${eo.targetDir}/classes</testOutputDirectory>
+    <sourceDirectory>src/main/java</sourceDirectory>
+    <directory>target</directory>
+    <outputDirectory>target/classes</outputDirectory>
+    <testOutputDirectory>target/classes</testOutputDirectory>
     <plugins>
       <plugin>
         <artifactId>maven-enforcer-plugin</artifactId>
