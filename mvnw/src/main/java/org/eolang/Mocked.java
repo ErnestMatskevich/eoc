@@ -31,4 +31,8 @@ public class Mocked extends PhDefault {
     public List<String> attrNames() {
         return attrNames;
     }
+    
+    public boolean isMocked() {
+        return true;
+    }
 }

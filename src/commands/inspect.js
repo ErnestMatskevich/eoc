@@ -47,7 +47,26 @@ module.exports = function(opts) {
         const processInput = async () => {
           const input = await ask('Enter command (or type "exit" to quit): ');
           const trimmed = input.trim();
-          if (trimmed.toLowerCase() === 'exit') {
+          if (trimmed === 'help') {
+            console.log(`
+          Available commands:
+
+            ls                  List attributes of the current object
+            go <attr>           Enter attribute
+            .<attr>             Same as 'go <attr>'
+            ..                  Go up one level
+            run / dataize       Dataize current object
+            add <name> / +<n>   Add empty attribute with name
+            rm <name> / -<n>    Remove attribute with name
+            cp Φ.<name>         Copy current object to φ.<name>
+            to Φ.<path>         Attach object from φ.<path> to current object
+            dd <a> Φ.<path>     Dispatch attribute <a> and attach result to φ.<path>
+            form                Create an empty formation and attach to the current object
+            put <bytes>         Set raw bytes as Δ (format: 48-65-6C-6C-6F)
+            help                Show this message
+            exit                Quit inspector
+            `);
+          } else if (trimmed.toLowerCase() === 'exit') {
             rl.close();
             server.kill();
             return resolve();

@@ -450,8 +450,24 @@ program.command('fmt')
 
 program.command('inspect')
   .description('Start EO inspect server and send input')
-  .action((str, opts) => {
-    coms().inspect(program.opts());
+  .option('--commands', 'Show list of interactive commands')
+  .action((opts) => {
+    if (opts.commands) {
+      console.log(`
+EO Inspect: Interactive Commands
+
+  ls                  List attributes
+  go attr / .attr     Navigate into attribute
+  ..                  Go back
+  add, rm, cp, to, dd Manipulate attributes
+  run / dataize       Execute current object
+  put bytes           Set Δ manually
+  exit                Quit
+  help                Show detailed help inside the inspector
+      `);
+    } else {
+      coms().inspect();
+    }
   });
 
 try {

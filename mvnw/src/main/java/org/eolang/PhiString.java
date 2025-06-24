@@ -10,7 +10,7 @@ public final class PhiString extends PhDefault {
         super(value.getBytes(StandardCharsets.UTF_8));
         this.value = value;
         this.add("φ", new AtOnce(new AtComposite(this, rho -> this)));
-        System.out.println("Data bytes: " + Arrays.toString(this.delta()));
+        //System.out.println("Data bytes: " + Arrays.toString(this.delta()));
     }
     
     @Override
